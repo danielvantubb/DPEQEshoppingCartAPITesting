@@ -1,8 +1,8 @@
 
-  Feature: Testing the Shoping Cart Cart
+  Feature: Testing the Shopping Cart Cart
      Background:
-       #* def url = "http://localhost:8500/"
        Given url "http://localhost:8500/shoppingcart/"
+
 Scenario: Bad header
        Given path "items"
        Given params {Type:"Fresh", Discount:"Applied"}
@@ -16,7 +16,6 @@ Scenario: Bad header
         When method Get
         Then status 200
         And match response !=null
-
 
     Scenario: Param is wrong
       Given path "items"
